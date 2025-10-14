@@ -1,0 +1,275 @@
+# Fjord — Helix theme (transparent, WT-aligned)
+
+###############################################################################
+# UI
+###############################################################################
+
+"ui.background" = { fg = "fg", bg = "none" }
+"ui.background.separator" = { fg = "line" }
+
+# Cursor (primary + color-modes support)
+"ui.cursor" = { fg = "base", bg = "fg" }
+"ui.cursor.normal" = { fg = "base", bg = "fg" }
+"ui.cursor.insert" = { fg = "base", bg = "cyan" }
+"ui.cursor.select" = { fg = "base", bg = "purple" }
+"ui.cursor.match"  = { fg = "orange", modifiers = ["bold"] }
+
+"ui.cursor.primary" = { fg = "base", bg = "fg" }
+"ui.cursor.primary.normal" = { fg = "base", bg = "fg" }
+"ui.cursor.primary.insert" = { fg = "base", bg = "cyan" }
+"ui.cursor.primary.select" = { fg = "base", bg = "purple" }
+
+# Gutter / line numbers
+"ui.gutter" = { fg = "dim_fg", bg = "none" }
+"ui.gutter.selected" = { fg = "blue", bg = "none", modifiers = ["bold"] }
+"ui.linenr" = { fg = "dim_fg", bg = "none" }
+"ui.linenr.selected" = { fg = "blue", bg = "none", modifiers = ["bold"] }
+
+# Statusline (includes color-modes variants)
+"ui.statusline"          = { fg = "fg",   bg = "surface" }
+"ui.statusline.inactive" = { fg = "dim_fg", bg = "surface" }
+"ui.statusline.normal"   = { fg = "base", bg = "blue",   modifiers = ["bold"] }
+"ui.statusline.insert"   = { fg = "base", bg = "green",  modifiers = ["bold"] }
+"ui.statusline.select"   = { fg = "base", bg = "purple", modifiers = ["bold"] }
+"ui.statusline.separator"= { fg = "line" }
+
+# Bufferline
+"ui.bufferline"            = { fg = "fg", bg = "surface" }
+"ui.bufferline.active"     = { fg = "blue", bg = "base", underline = { color = "blue", style = "line" } }
+"ui.bufferline.background" = { bg = "base" }
+
+# Popup, Window, Help
+"ui.popup"       = { fg = "fg",   bg = "surface" }
+"ui.popup.info"  = { fg = "fg",   bg = "surface" }
+"ui.popup.border"= { fg = "blue" }
+"ui.window"      = { fg = "line" }
+"ui.help"        = { fg = "dim_fg", bg = "surface" }
+
+# Menus
+"ui.menu"          = { fg = "fg", bg = "surface" }
+"ui.menu.selected" = { fg = "base", bg = "blue", modifiers = ["bold"] }
+"ui.menu.scroll"   = { fg = "blue", bg = "line" }
+
+# Text (generic UI text states)
+"ui.text"            = "fg"
+"ui.text.focus"      = { fg = "fg", bg = "surface", modifiers = ["bold"] }
+"ui.text.inactive"   = { fg = "muted" }
+"ui.text.info"       = { fg = "blue" }
+"ui.text.directory"  = { fg = "blue" }
+
+# Virtuals / guides / hints
+"ui.virtual.ruler"               = { bg = "ruler" }
+"ui.virtual.whitespace"          = { fg = "muted" }
+"ui.virtual.indent-guide"        = { fg = "muted" }
+"ui.virtual.wrap"                = { fg = "muted" }
+"ui.virtual.inlay-hint"          = { fg = "muted", bg = "surface" }
+"ui.virtual.inlay-hint.parameter"= { fg = "cyan",   bg = "surface" }
+"ui.virtual.inlay-hint.type"     = { fg = "blue",   bg = "surface" }
+"ui.virtual.jump-label"          = { fg = "b_purple", modifiers = ["bold"] }  # reserved pop color
+
+# Picker header + columns
+"ui.picker.header"               = { fg = "fg", bg = "surface", modifiers = ["bold"] }
+"ui.picker.header.column"        = { fg = "dim_fg", bg = "surface" }
+"ui.picker.header.column.active" = { fg = "blue", bg = "surface", modifiers = ["bold"] }
+
+# Selection & highlight (WT parity: amber selection)
+"ui.selection"         = { bg = "yellow", fg = "base" }
+"ui.selection.primary" = { bg = "yellow", fg = "base" }
+"ui.highlight"         = { bg = "line" }
+"ui.highlight.frameline" = { fg = "yellow", bg = "surface", modifiers = ["bold"] }
+
+# Cursorline / column — subtle, opaque
+"ui.cursorline.primary"     = { bg = "cursorline_dim" }
+"ui.cursorline.secondary"   = { bg = "none" }
+"ui.cursorcolumn.primary"   = { bg = "cursorline_dim" }
+"ui.cursorcolumn.secondary" = { bg = "none" }
+
+# Search
+"ui.search"         = { fg = "base", bg = "cyan" }
+"ui.search.current" = { fg = "base", bg = "orange" }
+
+# Diagnostics
+"warning" = { fg = "yellow" }
+"error"   = { fg = "red" }
+"info"    = { fg = "cyan" }
+"hint"    = { fg = "blue" }
+
+"diagnostic"             = { underline = { style = "curl", color = "muted" } }
+"diagnostic.hint"        = { underline = { style = "curl", color = "blue" } }
+"diagnostic.info"        = { underline = { style = "curl", color = "cyan" } }
+"diagnostic.warning"     = { underline = { style = "curl", color = "yellow" } }
+"diagnostic.error"       = { underline = { style = "curl", color = "red" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated"  = { modifiers = ["crossed_out"] }
+
+# Snippet tabstops
+"tabstop" = { fg = "base", bg = "yellow" }
+
+###############################################################################
+# Syntax (Tree-sitter)
+###############################################################################
+
+# Readability rules:
+# - Functions → amber (yellow)
+# - Types → blue (builtin brighter)
+# - Escapes → cyan
+# - Purple minimized (kept for rare/important)
+
+"attribute" = { fg = "green" }
+
+"type"                 = { fg = "blue" }
+"type.builtin"         = { fg = "blue", modifiers = ["bold"] }
+"type.parameter"       = { fg = "blue" }
+"type.enum"            = { fg = "blue" }
+"type.enum.variant"    = { fg = "blue", modifiers = ["bold"] }
+
+"constructor" = { fg = "blue" }
+
+"constant"                   = { fg = "b_blue" }
+"constant.builtin"           = { fg = "cyan", modifiers = ["bold"] }
+"constant.boolean"           = { fg = "cyan", modifiers = ["bold"] }
+"constant.character"         = { fg = "cyan" }
+"constant.character.escape"  = { fg = "cyan", modifiers = ["bold"] }
+"constant.numeric"           = { fg = "b_blue" }
+"constant.numeric.integer"   = { fg = "b_blue" }
+"constant.numeric.float"     = { fg = "b_blue" }
+
+"string"              = { fg = "green" }
+"string.regex"        = { fg = "cyan" }
+"string.special"      = { fg = "blue" }
+"string.special.path" = { fg = "blue" }
+"string.special.url"  = { fg = "blue", modifiers = ["underlined"] }
+"string.special.symbol" = { fg = "red" }
+
+"comment"                           = { fg = "dim_fg", modifiers = ["italic"] }
+"comment.line"                      = { fg = "dim_fg", modifiers = ["italic"] }
+"comment.line.documentation"        = { fg = "muted",  modifiers = ["italic"] }
+"comment.block"                     = { fg = "dim_fg", modifiers = ["italic"] }
+"comment.block.documentation"       = { fg = "muted",  modifiers = ["italic"] }
+"comment.unused"                    = { fg = "muted",  modifiers = ["italic", "dim"] }
+
+"variable"                       = { fg = "fg" }
+"variable.builtin"               = { fg = "cyan", modifiers = ["bold"] }
+"variable.parameter"             = { fg = "fg" }
+"variable.other.member"          = { fg = "cyan" }
+"variable.other.member.private"  = { fg = "cyan" }
+
+"label" = { fg = "b_purple", modifiers = ["bold"] }
+
+# Operators & punctuation — explicit families so '=' et al. never disappear
+"operator"              = { fg = "b_blue" }
+"operator.assign"       = { fg = "b_blue", modifiers = ["bold"] }
+"operator.arithmetic"   = { fg = "b_blue" }
+"operator.bitwise"      = { fg = "b_blue" }
+"operator.logical"      = { fg = "b_blue" }
+"operator.comparison"   = { fg = "b_blue" }
+"operator.ternary"      = { fg = "b_blue" }
+
+"punctuation"           = { fg = "fg" }
+"punctuation.delimiter" = { fg = "fg" }
+"punctuation.bracket"   = { fg = "fg" }
+"punctuation.special"   = { fg = "cyan" }
+
+# Keywords
+"keyword"                         = { fg = "green",   modifiers = ["bold"] }
+"keyword.control"                 = { fg = "b_green", modifiers = ["bold"] }
+"keyword.control.conditional"     = { fg = "b_green", modifiers = ["bold"] }
+"keyword.control.repeat"          = { fg = "b_green", modifiers = ["bold"] }
+"keyword.control.import"          = { fg = "b_green", modifiers = ["bold"] }
+"keyword.control.return"          = { fg = "b_green", modifiers = ["bold"] }
+"keyword.control.exception"       = { fg = "b_green", modifiers = ["bold"] }
+"keyword.operator"                = { fg = "b_blue" }   # for grammars that classify '=' here
+"keyword.directive"               = { fg = "orange" }
+"keyword.function"                = { fg = "blue",    modifiers = ["bold"] }
+"keyword.storage"                 = { fg = "blue" }
+"keyword.storage.type"            = { fg = "blue" }
+"keyword.storage.modifier"        = { fg = "green" }
+
+# Functions → amber
+"function"                 = { fg = "yellow", modifiers = ["bold"] }
+"function.builtin"         = { fg = "yellow", modifiers = ["bold"] }
+"function.method"          = { fg = "yellow", modifiers = ["bold"] }
+"function.method.private"  = { fg = "yellow", modifiers = ["bold"] }
+"function.macro"           = { fg = "b_purple" }
+"function.special"         = { fg = "orange" }
+
+"tag"        = { fg = "blue" }
+"tag.builtin"= { fg = "blue" }
+
+"namespace"  = { fg = "blue" }
+"special"    = { fg = "blue" }
+
+# Markup
+"markup.heading"   = { fg = "blue", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "red", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "orange", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "yellow", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "green", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "blue", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "b_purple", modifiers = ["bold"] }
+"markup.marker"    = { fg = "muted" }
+"markup.list"      = { fg = "cyan" }
+"markup.list.unchecked" = { fg = "muted" }
+"markup.list.checked"   = { fg = "green" }
+"markup.bold"      = { modifiers = ["bold"] }
+"markup.italic"    = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link"      = { fg = "blue" }
+"markup.link.url"  = { fg = "blue", modifiers = ["underlined"] }
+"markup.link.label"= { fg = "b_purple" }
+"markup.link.text" = { fg = "blue" }
+"markup.quote"     = { fg = "b_purple" }
+"markup.raw"       = { fg = "green" }
+"markup.raw.inline"= { fg = "green" }
+"markup.raw.block" = { fg = "green" }
+
+# Diff
+"diff.plus"         = { fg = "green" }
+"diff.plus.gutter"  = { fg = "green" }
+"diff.minus"        = { fg = "red" }
+"diff.minus.gutter" = { fg = "red" }
+"diff.delta"        = { fg = "blue" }
+"diff.delta.moved"  = { fg = "b_purple" }
+"diff.conflict"     = { fg = "orange", modifiers = ["bold"] }
+"diff.delta.gutter" = { fg = "blue" }
+
+###############################################################################
+# Palette (Fjord — Windows Terminal aligned)
+###############################################################################
+
+[palette]
+# Base & UI
+base      = "#1B2532"   # used for non-transparent surfaces
+base_     = "#1E2938"   # subtle overlay for cursorline (opaque)
+surface   = "#1F2A39"   # panels, popups, statusline base
+line      = "#233141"   # separators
+selection = "#263449"   # generic highlight block (not used for text selection)
+
+# Text
+fg        = "#E4EDE5"
+dim_fg    = "#6C7A86"
+muted     = "#51606B"
+
+# Accents (from your WT scheme)
+red       = "#F37C7C"
+orange    = "#FFE0A3"   # used for search.current contrast (pairs with yellow selection)
+yellow    = "#FFD285"   # AMBER (WT selection, functions)
+green     = "#9DD99A"   # cursor / insert statusline
+purple    = "#B9A0F8"
+cyan      = "#B8E7E9"
+blue      = "#5DA6EA"
+
+# Brights (for jump labels / emphasis, and parity with ANSI brights)
+b_black   = "#2B343E"
+b_red     = "#FF9B9B"
+b_green   = "#BFE9BB"
+b_yellow  = "#FFE0A3"
+b_blue    = "#7BB8FF"
+b_purple  = "#C8B2FF"
+b_cyan    = "#9ADFD4"
+b_white   = "#F7FBF9"
+
+# UI helpers
+ruler          = "#243244"
+cursorline_dim = "#1F2937"   # very close to base, subtle & opaque
+

@@ -1,0 +1,27 @@
+{
+        "name": "Fjord",
+        
+        "background": "#1B2532",
+        "foreground": "#E4EDE5",
+
+        "selectionBackground": "#FFD285",
+        "cursorColor": "#9DD99A",
+
+        "black":  "#19191C",
+        "red":    "#F37C7C",
+        "green":  "#9DD99A",
+        "yellow": "#FFD285",
+        "blue":   "#5DA6EA",
+        "purple": "#B9A0F8",
+        "cyan":   "#B8E7E9",
+        "white":  "#E8F0F3",
+
+        "brightBlack":  "#2B343E",  // a touch lighter for real separation
+        "brightRed":    "#FF9B9B",  // gentle lift, not neon
+        "brightGreen":  "#BFE9BB",  // brighter leaf that stays soft
+        "brightYellow": "#FFE0A3",  // amber highlight
+        "brightBlue":   "#7BB8FF",  // vivid fjord-sky
+        "brightPurple": "#C8B2FF",  // clearer aurora violet
+        "brightCyan":   "#9ADFD4",  // calmer, more saturated than base
+        "brightWhite":  "#F7FBF9"   // crisp mist-white for bold text
+        }

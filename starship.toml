@@ -1,0 +1,161 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](color_green)\
+$os\
+$username\
+[](fg:color_green bg:color_teal)\
+$directory\
+[](fg:color_teal bg:color_sky)\
+$git_branch\
+$git_status\
+[](fg:color_sky bg:color_sapphire)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$python\
+[](fg:color_sapphire bg:color_blue)\
+$docker_context\
+$conda\
+[](fg:color_blue bg:color_base)\
+$time\
+[ ](fg:color_base)\
+$line_break$character"""
+
+palette = 'colors'
+
+[palettes.colors]
+# Accents (updated)
+# color_green    = "#81BB72"  # softened leaf green
+color_green    = "#9DD99A"  # softened leaf green
+color_teal     = "#B8E7E9"  # gentle seafoam teal
+color_sky      = "#7BB8FF"  # bright fjord-sky
+color_sapphire = "#5DA6EA"  # medium fjord blue
+color_blue     = "#4C91E0"  # deeper blue
+
+# Neutrals (Twilight base)
+color_base     = "#212128"  # dusk background
+color_surface0 = "#1F2A39"  # raised panel
+color_text     = "#E4EDE5"  # soft ice foreground
+
+# Alerts
+color_red      = "#F37C7C"  # calm coral
+color_purple   = "#B9A0F8"  # aurora violet (used sparingly)
+color_yellow   = "#FFD285"  # amber (matches Helix functions)
+
+[os]
+disabled = false
+style = "bg:color_green fg:color_surface0"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+Kali = " "
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:color_green fg:color_surface0"
+style_root = "bg:color_green fg:color_surface0"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:color_surface0 bg:color_teal"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:color_sky"
+format = '[[ $symbol $branch ](fg:color_surface0 bg:color_sky)]($style)'
+
+[git_status]
+style = "bg:color_sky"
+format = '[[($all_status$ahead_behind )](fg:color_surface0 bg:color_sky)]($style)'
+
+[c]
+symbol = " "
+style = "bg:color_sapphire"
+format = '[[ $symbol( $version) ](fg:color_surface0 bg:color_sapphire)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color_sapphire"
+format = '[[ $symbol( $version) ](fg:color_surface0 bg:color_sapphire)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:color_sapphire"
+format = '[[ $symbol( $version) ](fg:color_surface0 bg:color_sapphire)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color_sapphire"
+format = '[[ $symbol( $version) ](fg:color_surface0 bg:color_sapphire)]($style)'
+
+[php]
+symbol = ""
+style = "bg:color_sapphire"
+format = '[[ $symbol( $version) ](fg:color_surface0 bg:color_sapphire)]($style)'
+
+[java]
+symbol = " "
+style = "bg:color_sapphire"
+format = '[[ $symbol( $version) ](fg:color_surface0 bg:color_sapphire)]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_sapphire"
+format = '[[ $symbol( $version) ](fg:color_surface0 bg:color_sapphire)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( $context) ](fg:color_text bg:color_blue)]($style)'
+
+[conda]
+style = "bg:color_blue"
+format = '[[ $symbol( $environment) ](fg:color_text bg:color_blue)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:color_base"
+format = '[[  $time ](fg:color_text bg:color_base)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:color_green)'
+error_symbol   = '[](bold fg:color_red)'
+
