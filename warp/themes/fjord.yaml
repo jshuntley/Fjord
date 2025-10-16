@@ -1,0 +1,25 @@
+name: Fjord
+accent: '#9DD99A'
+cursor: '#9DD99A'
+background: '#1B2532'
+foreground: '#E4EDE5'
+details: darker
+terminal_colors:
+  bright:
+    black:   '#2B343E'
+    red:     '#FF9B9B'
+    green:   '#BFE9BB'
+    yellow:  '#FFE0A3'
+    blue:    '#7BB8FF'
+    magenta: '#C8B2FF'
+    cyan:    '#9ADFD4'
+    white:   '#F7FBF9'
+  normal:
+    black:   '#19191C'
+    red:     '#F37C7C'
+    green:   '#9DD99A'
+    yellow:  '#FFD285'
+    blue:    '#5DA6EA'
+    magenta: '#B9A0F8'
+    cyan:    '#B8E7E9'
+    white:   '#E8F0F3'
