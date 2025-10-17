@@ -1,0 +1,79 @@
+// Fjord — canonical palette
+
+// Base
+$fjord-background: #1B2532;
+$fjord-background-alt: #222E3F;
+$fjord-foreground: #E8F0F3;
+$fjord-muted: #6C7A86;
+$fjord-muted-dim: #51606B;
+$fjord-line: #233141;
+
+// Accents
+$fjord-green: #9DD99A;
+$fjord-blue: #5DA6EA;
+$fjord-yellow: #FFD285;
+$fjord-purple: #B9A0F8;
+$fjord-red: #F37C7C;
+$fjord-cyan: #B8E7E9;
+
+// Brights
+$fjord-bright-black: #212128;
+$fjord-bright-red: #FF9B9B;
+$fjord-bright-green: #A3D5A0;
+$fjord-bright-yellow: #FFE0A3;
+$fjord-bright-blue: #7BB8FF;
+$fjord-bright-purple: #D4C6F7;
+$fjord-bright-cyan: #A1E9DE;
+$fjord-bright-white: #EBEDEE;
+
+// Semantic
+$fjord-ok: #9DD99A;
+$fjord-warning: #FFD285;
+$fjord-error: #F37C7C;
+$fjord-info: #5DA6EA;
+$fjord-hint: #B8E7E9;
+$fjord-modified: #6FAFF2;
+$fjord-conflict: #C89CFD;
+
+// Extended UI
+$fjord-surface: #1F2A39;
+$fjord-overlay-ruler: #2D3D52;
+$fjord-inactive-overlay: #17202C;
+
+// Optional: CSS variables export
+:root {
+  --fjord-background: #{$fjord-background};
+  --fjord-background-alt: #{$fjord-background-alt};
+  --fjord-foreground: #{$fjord-foreground};
+  --fjord-muted: #{$fjord-muted};
+  --fjord-muted-dim: #{$fjord-muted-dim};
+  --fjord-line: #{$fjord-line};
+
+  --fjord-green: #{$fjord-green};
+  --fjord-blue: #{$fjord-blue};
+  --fjord-yellow: #{$fjord-yellow};
+  --fjord-purple: #{$fjord-purple};
+  --fjord-red: #{$fjord-red};
+  --fjord-cyan: #{$fjord-cyan};
+
+  --fjord-bright-black: #{$fjord-bright-black};
+  --fjord-bright-red: #{$fjord-bright-red};
+  --fjord-bright-green: #{$fjord-bright-green};
+  --fjord-bright-yellow: #{$fjord-bright-yellow};
+  --fjord-bright-blue: #{$fjord-bright-blue};
+  --fjord-bright-purple: #{$fjord-bright-purple};
+  --fjord-bright-cyan: #{$fjord-bright-cyan};
+  --fjord-bright-white: #{$fjord-bright-white};
+
+  --fjord-ok: #{$fjord-ok};
+  --fjord-warning: #{$fjord-warning};
+  --fjord-error: #{$fjord-error};
+  --fjord-info: #{$fjord-info};
+  --fjord-hint: #{$fjord-hint};
+  --fjord-modified: #{$fjord-modified};
+  --fjord-conflict: #{$fjord-conflict};
+
+  --fjord-surface: #{$fjord-surface};
+  --fjord-overlay-ruler: #{$fjord-overlay-ruler};
+  --fjord-inactive-overlay: #{$fjord-inactive-overlay};
+}

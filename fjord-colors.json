@@ -1,0 +1,46 @@
+{
+  "name": "Fjord",
+  "version": "1.0.0",
+  "palette": {
+    "base": {
+      "background": "#1B2532",
+      "backgroundAlt": "#222E3F",
+      "foreground": "#E8F0F3",
+      "muted": "#6C7A86",
+      "mutedDim": "#51606B",
+      "line": "#233141"
+    },
+    "accents": {
+      "green": "#9DD99A",
+      "blue": "#5DA6EA",
+      "yellow": "#FFD285",
+      "purple": "#B9A0F8",
+      "red": "#F37C7C",
+      "cyan": "#B8E7E9"
+    },
+    "brights": {
+      "brightBlack": "#212128",
+      "brightRed": "#FF9B9B",
+      "brightGreen": "#A3D5A0",
+      "brightYellow": "#FFE0A3",
+      "brightBlue": "#7BB8FF",
+      "brightPurple": "#D4C6F7",
+      "brightCyan": "#A1E9DE",
+      "brightWhite": "#EBEDEE"
+    },
+    "semantic": {
+      "ok": "#9DD99A",
+      "warning": "#FFD285",
+      "error": "#F37C7C",
+      "info": "#5DA6EA",
+      "hint": "#B8E7E9",
+      "modified": "#6FAFF2",
+      "conflict": "#C89CFD"
+    },
+    "extended": {
+      "surface": "#1F2A39",
+      "overlayRuler": "#2D3D52",
+      "inactiveOverlay": "#17202C"
+    }
+  }
+}
