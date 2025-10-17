@@ -1,0 +1,28 @@
+{
+  "name": "fjord",
+  "displayName": "Fjord",
+  "description": "Dusk-blue base with soft leaf-green accents, amber selections, and crisp blue/cyan separation.",
+  "version": "1.0.0",
+  "publisher": "your-name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/fjord"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Fjord",
+        "uiTheme": "vs-dark",
+        "path": "./themes/fjord-color-theme.json"
+      }
+    ]
+  }
+}
+
